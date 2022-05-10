@@ -78,7 +78,9 @@ let sortDayName = ["SUN", "MON", "TUE", "WED", "THD", "FRI", "SAT"];
 
 // -----------------------------------------------------
 // ------ first time initilizion -----
-userData = JSON.parse(localStorage.getItem("sb-calendar"))
+if(JSON.parse(localStorage.getItem("sb-calendar"))) {
+  userData = JSON.parse(localStorage.getItem("sb-calendar"))
+}
 setBord(getDays(currentMonth, currentYear), currentMonth, currentYear);
 monthInput.value = monthName[currentMonth];
 yearInput.value = currentYear;
